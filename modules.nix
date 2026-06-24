@@ -77,7 +77,7 @@ in
       wantedBy = [ "multi-user.target" ];
 
       serviceConfig = {
-        ExecStart = "${pkgs.veyon}/bin/veyon-service";
+        ExecStart = "${cfg.package}/bin/veyon-service";
         Type = "simple";
         Restart = "always";
         RestartSec = 0;
